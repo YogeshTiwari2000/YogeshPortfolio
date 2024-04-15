@@ -48,15 +48,3 @@ $(document).ready(function(){
         loop: true
     });
 });
-
-
-  function openPDF() {
-      var pdfUrl = document.getElementById('pdfUrl').value.trim();
-
-      if (pdfUrl !== 'file:///Users/user/www/compro/compro-engage-c-material/te/ENG25_LC_TE_Cover_Perfect_Bound_C2.pdf') {
-        // Open PDF in a new tab or window
-        window.open(pdfUrl, '_blank');
-      } else {
-        alert('Please enter the URL of the PDF.');
-      }
-    }
