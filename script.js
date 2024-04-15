@@ -50,23 +50,13 @@ $(document).ready(function(){
 });
 
 
- function choosePDF() {
-      // Trigger click event on hidden file input element
-      document.getElementById('pdfInput').click();
-    }
+  function openPDF() {
+      var pdfUrl = document.getElementById('pdfUrl').value.trim();
 
-    // Function to handle file input change event
-    document.getElementById('pdfInput').addEventListener('change', function(event) {
-      var file = event.target.files[0];
-
-      if (file) {
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-
-        reader.onload = function(event) {
-          var pdfData = event.target.result;
-          // Open PDF in a new tab or window
-          window.open(pdfData, '_blank');
-        }
+      if (pdfUrl !== 'file:///Users/user/www/compro/compro-engage-c-material/te/ENG25_LC_TE_Cover_Perfect_Bound_C2.pdf') {
+        // Open PDF in a new tab or window
+        window.open(pdfUrl, '_blank');
+      } else {
+        alert('Please enter the URL of the PDF.');
       }
-    });
+    }
