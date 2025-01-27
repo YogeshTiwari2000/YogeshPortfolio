@@ -10,6 +10,16 @@
 html {
 	scroll-behavior: smooth;
 }
+.text-ellipsis {
+	overflow: hidden;         /* Hide overflowed text */
+	display: -webkit-box;     /* Enable WebKit box model for multiline ellipsis */
+	-webkit-box-orient: vertical; /* Set the box orientation to vertical */
+	text-overflow: ellipsis;  /* Add ellipsis at the end */
+	line-clamp: 6;            /* Number of visible lines (adjust based on content) */
+	max-height: 9em;          /* Adjust based on the line height to match `line-clamp` */
+	line-height: 1.5em;       /* Adjust line height */
+  }
+  
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -169,7 +179,7 @@ section .title::after {
 /* home section styling */
 .home {
 	display: flex;
-	background: url("giphy.gif") no-repeat center;
+	background: url("./images/giphy.gif") no-repeat center;
 	height: 100vh;
 	color: #fff;
 	min-height: 500px;
@@ -440,9 +450,9 @@ section .title::after {
 .contact .title::after {
 	content: "Get in Touch";
 }
-.contact .contact-content .column {
+/* .contact .contact-content .column {
 	width: calc(50% - 30px);
-}
+} */
 .contact .contact-content .text {
 	font-size: 20px;
 	font-weight: 600;
@@ -457,14 +467,16 @@ section .title::after {
 .contact .contact-content .row {
 	display: flex;
 	height: 65px;
-	align-items: center;
+	/* align-items: center; */
 }
 .contact .contact-content .row .info {
-	margin-left: 30px;
+	margin-left: 15px;
 }
 .contact .contact-content .row i {
 	font-size: 25px;
 	color: rgb(181, 0, 252);
+	position: relative;
+	top: 5px;
 }
 .contact .contact-content .info .head {
 	font-weight: 500;
@@ -589,6 +601,29 @@ footer span .social a:nth-child(4):hover {
     justify-content: center;
     gap: 2rem;
 }
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.icons {
+    display: flex;
+    gap: 2rem;
+}
+@media (max-width: 576px) {
+	.icons {
+		display: flex;
+		gap: 2rem;
+		flex-direction: column;
+	}
+	.contact .contact-content .row {
+		display: flex;
+		height: fit-content;
+		/* align-items: center; */
+	}
+}
+
 /* responsive media query start */
 @media (max-width: 1300px) {
 	.home .max-width {
