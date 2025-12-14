@@ -57,7 +57,8 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="./images/yogi.jpg" alt="">
+                    <!-- <img src="./images/icon.avif" alt="Portrait of Yogesh Tiwari" class="spring"> -->
+                    <img src="./images/yogi.jpg" alt="Portrait of Yogesh Tiwari">
                 </div>
 
                 <div class="column right">
@@ -69,11 +70,11 @@
                         Always ready to learn something new and apply it in real-life scenarios. Open to opportunities
                         related to Web Development.
                     </p>
-                    <a href="https://drive.google.com/file/d/1e_MDwtMNyq_iNtJ-tn3hdXmH51RsAK0e/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/1b3EcABjN2DdTQ2jvb5ZjEc-afLd41hr0/view?usp=sharing"
                         target="_blank" class="btn" download="Yogesh_Tiwari_CV.pdf">
                         Download CV
                     </a>
-                    <a href="https://drive.google.com/file/d/1e_MDwtMNyq_iNtJ-tn3hdXmH51RsAK0e/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/1b3EcABjN2DdTQ2jvb5ZjEc-afLd41hr0/view?usp=sharing"
                         target="_blank" class="btn">
                         Open CV
                     </a>
@@ -227,82 +228,107 @@
     <section class="projects" id="projects">
         <div class="max-width">
             <h2 class="title">My Projects</h2>
-            <div class="carousel">
-                <div class="card">
-                    <div class="box">
-                        <a href="https://yogeshtiwari2000.github.io/CarPool/welcome" target="_blank"><img
-                                src="./images/carpool.png" alt=""></a>
-                        <div class="text">Carpool Application (Angular)</div>
-                        <p class="text-ellipsis">
-                        <ul>
-                            <li>Features: connects people traveling along the same route so they can share rides,
-                            </li>
-                            <li>reducing
-                                travel costs, traffic congestion, and environmental impact. </li>
-                            <li>It enables drivers with available
-                                seats in their vehicles to offer rides to passengers heading in the same direction.</li>
-                        </ul>
-                        </p>
+
+            <div class="projects-carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Previous project">&#10094;</button>
+
+                <div class="carousel">
+                    <div class="carousel-track">
+
+                        <!-- CARD 1 -->
+                        <div class="card">
+                            <div class="box">
+                                <a href="https://treasuresdocs.com/login" target="_blank" rel="noopener noreferrer">
+                                    <img src="./images/treasuredocs.png" alt="Treasures Docs">
+                                </a>
+                                <div class="text">Treasures Docs (Angular, Ionic)</div>
+                                <ul class="text-ellipsis">
+                                    <li>EMR system for compliance and record management</li>
+                                    <li>Daily, weekly, monthly task tracking and reporting</li>
+                                    <li>150+ customizable form templates</li>
+                                    <li>Admin & client controls, reports, PDFs, SMS, email, payments</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="box">
+                                <a href="https://yogeshtiwari2000.github.io/CarPool/welcome" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="./images/carpool.png" alt="carpool"></a>
+                                </a>
+                                <div class="text">UrbanLift (Angular, Ionic)</div>
+                                <ul class="text-ellipsis">
+                                    <li>Features: connects people traveling along the same route so they can share
+                                        rides,
+                                    </li>
+                                    <li>reducing
+                                        travel costs, traffic congestion, and environmental impact. </li>
+                                    <li>It enables drivers with available
+                                        seats in their vehicles to offer rides to passengers heading in the same
+                                        direction.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="box">
+                                <a href="https://yogeshtiwari2000.github.io/votingService/" target="_blank"><img
+                                        src="./images/vote.png" alt="vote"></a>
+                                </a>
+                                <div class="text">Voting Application(Angular)</div>
+                                <ul class="text-ellipsis">
+                                    <li>Features: User Authenticati on & Authorization Role-based access control (Voter,
+                                        Admin, Election Officer)
+
+                                    </li>
+                                    <li>Live vote counting and analytics</li>
+                                    <li>Backend server on Render and database mongoDB</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="box">
+                                <a href="https://yogeshtiwari2000.github.io/cocktailsHai/" target="_blank "
+                                    rel="noopener noreferrer"><img src="./images/CocktailsSetup.png"
+                                        alt="Cocktails"></a>
+                                </a>
+                                <div class="text">Cocktail (React)</div>
+                                <ul class="text-ellipsis">
+                                    <li>Features: Browse a list of cocktails with detailed information, including
+                                        ingredients, preparation instructions, and more.
+
+                                    </li>
+                                    <li>Search functionality to find specific cocktails</li>
+                                    <li>Filtering options (e.g., by alcohol type, difficulty level,popularity)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="box">
+                                <a href="https://colorshadeshai.netlify.app/" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/colorGenerator.png" alt="color"></a>
+                                </a>
+                                <div class="text">ColorShade (React)</div>
+                                <ul class="text-ellipsis">
+                                    <li>Features: Color picker or palette to select a base color and explore different
+                                        shades
+                                        and
+                                        tints of the selected color.
+
+
+                                    </li>
+                                    <li>View the hexadecimal values of the selected colors.</li>
+                                    <li>Copy the color codes for use in other project.</li>
+                                    <li>Visually engaging and intuitive design to showcase the color options.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Repeat other cards exactly same way -->
+
                     </div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="https://yogeshtiwari2000.github.io/votingService/" target="_blank"><img
-                                src="./images/vote.png" alt=""></a>
-                        <div class="text"> Voting Application(Angular)</div>
-                        <p class="text-ellipsis">
-                        <ul>
-                            <li>Features: User Authenticati on & Authorization Role-based access control (Voter,
-                                Admin, Election Officer)
 
-                            </li>
-                            <li>Live vote counting and analytics</li>
-                            <li>Backend server on Render and database mongoDB</li>
-                        </ul>
-
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="https://yogeshtiwari2000.github.io/cocktailsHai/" target="_blank"><img
-                                src="./images/CocktailsSetup.png" alt=""></a>
-                        <div class="text">Cocktail (React)</div>
-                        <p class="text-ellipsis">
-                        <ul>
-                            <li>Features: Browse a list of cocktails with detailed information, including
-                                ingredients, preparation instructions, and more.
-
-                            </li>
-                            <li>Search functionality to find specific cocktails</li>
-                            <li>Filtering options (e.g., by alcohol type, difficulty level,popularity)</li>
-                        </ul>
-
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="https://colorshadeshai.netlify.app/" target="_blank"><img
-                                src="./images/colorGenerator.png" alt=""></a>
-                        <div class="text">ColorShade (React)</div>
-                        <p class="text-ellipsis">
-                        <ul>
-                            <li>Features: Color picker or palette to select a base color and explore different shades
-                                and
-                                tints of the selected color.
-
-
-                            </li>
-                            <li>View the hexadecimal values of the selected colors.</li>
-                            <li>Copy the color codes for use in other project.</li>
-                            <li>Visually engaging and intuitive design to showcase the color options.</li>
-                        </ul>
-
-                        </p>
-                    </div>
-                </div>
-
+                <button class="carousel-btn next" aria-label="Next project">&#10095;</button>
             </div>
         </div>
     </section>

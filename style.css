@@ -300,6 +300,27 @@ section .contact::after {
 	content: "Know me better";
 }
 
+.about-content {
+	position: relative;
+	/* required for pseudo-element positioning */
+	z-index: 1;
+}
+
+.about-content::before {
+	content: "";
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	width: 500px;
+	height: 500px;
+	background-image: url("./images/icon.avif");
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 0.15;
+	z-index: -1;
+	pointer-events: none;
+}
+
 .about .about-content .left {
 	width: 45%;
 }
@@ -312,7 +333,7 @@ section .contact::after {
 }
 
 .about .about-content .right {
-	width: 55%;
+	width: 50%;
 }
 
 .about .about-content .right .text {
@@ -941,11 +962,87 @@ button:active {
 }
 
 .card ul {
-	padding: 0 1rem;
+	padding: 0 1.2rem;
 	text-align: left;
 }
 
+.projects-carousel-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.carousel {
+	overflow: hidden;
+	width: 100%;
+}
+
+.carousel-track {
+	display: flex;
+	gap: 20px;
+	transition: transform 0.4s ease-in-out;
+	/* flex-direction: row !important; */
+}
+
+/* Card sizing */
+.carousel-track .card {
+	/* min-width: 320px; */
+	min-width: 37%;
+	max-width: 320px;
+	flex-shrink: 0;
+}
+
+/* Arrow buttons */
+.carousel-btn {
+	background: #111;
+	color: #fff;
+	border: none;
+	font-size: 28px;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+}
+
+.carousel-btn:hover {
+	background: #e63946;
+}
+
+.carousel-btn.prev {
+	margin-right: 10px;
+}
+
+.carousel-btn.next {
+	margin-left: 10px;
+}
+
+.spring {}
+
+/* Optional: hide arrows on mobile */
+@media (max-width: 767px) {
+	.carousel-btn {
+		display: none;
+	}
+}
+
+
 @media (max-width: 576px) {
+	.about-content::before {
+		top: 60%;
+		left: 50%;
+		right: auto;
+		width: 220px;
+		height: 220px;
+		background-position: center;
+		background-size: contain;
+		opacity: 0.08;
+		transform: translate(-50%, -50%);
+	}
+
 	.icons {
 		display: flex;
 		gap: 2rem;
@@ -986,6 +1083,36 @@ button:active {
 		height: fit-content; */
 		/* align-items: center; */
 	}
+
+	.carousel {
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.carousel-track {
+		transition: none;
+		padding: unset;
+		flex-direction: column;
+	}
+
+	.carousel-track .card {
+		min-width: 85%;
+		max-width: 100%;
+		scroll-snap-align: center;
+		margin-bottom: 0px !important;
+	}
+
+	/* Hide arrows on mobile */
+	.carousel-btn {
+		display: none;
+	}
+
+	.about .about-content .left img {
+		height: 230px;
+		width: 230px;
+		border-radius: 7rem;
+	}
 }
 
 /* responsive media query start */
@@ -995,12 +1122,12 @@ button:active {
 	}
 }
 
-@media (max-width: 1104px) {
+/* @media (max-width: 1104px) {
 	.about .about-content .left img {
 		height: 350px;
 		width: 350px;
 	}
-}
+} */
 
 @media (max-width: 991px) {
 	.max-width {
@@ -1148,5 +1275,22 @@ button:active {
 		width: 35px;
 		font-size: 23px;
 		line-height: 38px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 820px) {
+	.about-content::before {
+		content: "";
+		position: absolute;
+		top: -40px;
+		right: -40px;
+		width: 780px;
+		height: 800px;
+		background-image: url("./images/icon.avif");
+		background-repeat: no-repeat;
+		background-size: contain;
+		opacity: 0.15;
+		z-index: -1;
+		pointer-events: none;
 	}
 }

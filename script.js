@@ -1,3 +1,26 @@
+const track = document.querySelector('.carousel-track');
+const cards = document.querySelectorAll('.carousel-track .card');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+let index = 0;
+const cardWidth = cards[0].offsetWidth + 20; // card width + gap
+
+nextBtn.addEventListener('click', () => {
+    if (index < cards.length - 1) {
+        index++;
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (index > 0) {
+        index--;
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+});
+
+
 $(document).ready(function () {
     $(window).scroll(function () {
         // sticky navbar on scroll script
